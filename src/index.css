@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root { --background: 222 29% 7%; --foreground: 210 40% 96%; --muted: 222 20% 13%; --muted-foreground: 215 16% 62%; --card: 222 24% 10%; --card-foreground: 210 40% 96%; --border: 222 18% 20%; --primary: 25 95% 58%; --primary-foreground: 222 29% 7%; --secondary: 222 18% 17%; --secondary-foreground: 210 40% 96%; --accent: 162 77% 47%; --accent-foreground: 222 29% 7%; --destructive: 0 72% 55%; --destructive-foreground: 210 40% 96%; --input: 222 18% 20%; --ring: 25 95% 58%; --radius: .75rem; }
+  * { @apply border-border; }
+  body { @apply bg-background text-foreground; margin: 0; min-width: 350px; font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
+  button, input { font: inherit; }
+}
+
+.popup-shell { width: 350px; padding: 18px; background: radial-gradient(circle at 90% 0%, rgba(255, 126, 56, .12), transparent 34%), hsl(var(--background)); color: hsl(var(--foreground)); }
+.brand-row, .panel-heading, .action-row, footer { display: flex; align-items: center; }
+.brand-row { gap: 10px; margin-bottom: 16px; }
+.brand-mark { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 10px; color: #12151d; background: linear-gradient(145deg, #ffb15d, #ff683d); box-shadow: 0 0 24px rgba(255, 119, 64, .25); }
+.eyebrow, .section-label, .hero-kicker { margin: 0; font-size: 9px; letter-spacing: .16em; font-weight: 800; color: hsl(var(--muted-foreground)); }
+.brand-row h1 { margin: 1px 0 0; font-size: 19px; letter-spacing: -.04em; }
+.brand-row h1 span { color: #ff9850; }
+.icon-link { margin-left: auto; color: hsl(var(--muted-foreground)); transition: color .2s; }.icon-link:hover { color: #fff; }
+.hero-card { display: flex; justify-content: space-between; min-height: 105px; padding: 17px; border: 1px solid rgba(255, 152, 80, .22); border-radius: 14px; background: linear-gradient(135deg, rgba(255, 145, 78, .16), rgba(28, 35, 49, .56)); }
+.hero-kicker { color: #ffab68; }.hero-card h2 { margin: 8px 0 5px; font-size: 22px; letter-spacing: -.045em; }.hero-card p:last-child { max-width: 218px; margin: 0; color: hsl(var(--muted-foreground)); font-size: 12px; line-height: 1.5; }.hero-icon { align-self: flex-end; color: #ffae67; opacity: .8; }
+.panel { margin-top: 12px; padding: 15px; border: 1px solid hsl(var(--border)); border-radius: 14px; background: rgba(23, 29, 41, .74); }.panel-heading { justify-content: space-between; margin-bottom: 13px; }.panel-heading h3 { margin: 3px 0 0; font-size: 14px; }.status-dot { width: 8px; height: 8px; border-radius: 50%; background: #64748b; }.status-dot.success { background: #35d39b; box-shadow: 0 0 10px #35d39b; }.status-dot.error { background: #fb7185; }.status-dot.checking { background: #fbbf24; animation: pulse 1s infinite; }
+label { display: block; margin-top: 10px; color: hsl(var(--muted-foreground)); font-size: 11px; } input { display: block; width: 100%; box-sizing: border-box; margin-top: 5px; padding: 9px 10px; border: 1px solid hsl(var(--border)); border-radius: 8px; outline: none; color: #edf2f7; background: rgba(10, 14, 22, .72); font-size: 12px; } input:focus { border-color: #ff9850; box-shadow: 0 0 0 2px rgba(255, 152, 80, .12); }
+.model-hint { margin: 8px 0 0; color: #94a3b8; font-size: 10px; line-height: 1.4; }.action-row { gap: 8px; margin-top: 13px; }.action-row button { flex: 1; font-size: 11px; }.action-row svg { margin-right: 5px; }.spin { animation: spin 1s linear infinite; }.status-box { display: flex; gap: 7px; align-items: center; margin-top: 11px; padding: 8px 9px; border-radius: 8px; color: #aab6c8; background: rgba(148, 163, 184, .08); font-size: 10px; }.status-box.success { color: #6ee7b7; background: rgba(52, 211, 153, .08); }.status-box.error { color: #fda4af; background: rgba(251, 113, 133, .08); }
+.tip-card { margin-top: 12px; padding: 12px; border-radius: 12px; background: rgba(52, 211, 153, .06); }.tip-card p { margin: 0; color: #a7b4c5; font-size: 11px; line-height: 1.5; }.tip-card strong { color: #72e1b5; }.tip-card a, footer a { display: inline-flex; align-items: center; gap: 4px; margin-top: 8px; color: #ffad6c; font-size: 10px; text-decoration: none; } footer { justify-content: space-between; padding: 13px 2px 0; color: #64748b; font-size: 9px; } footer a { margin: 0; }
+@keyframes pulse { 50% { opacity: .35; } } @keyframes spin { to { transform: rotate(360deg); } }
