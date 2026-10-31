@@ -18,7 +18,7 @@ Code-Bhumi is a privacy-conscious Chrome extension that helps learners solve Lee
 ## Install locally
 
 ```bash
-git clone https://github.com/Ronit-paikray/Code-Bhumi.git
+git clone https://github.com/Kumari-smruti/Code-Bhumi.git
 cd Code-Bhumi
 npm ci
 npm run build
@@ -80,5 +80,5 @@ Read [CONTRIBUTING.md](CONTRIBUTING.md), open an issue for a focused change, and
 
 ## Maintainer
 
-Developed and maintained by [Ronit Paikray](https://github.com/Ronit-paikray). The project is released under [GPL-3.0](LICENSE).
+Developed and maintained by [Kumari Smruti](https://github.com/Kumari-smruti). The project is released under [GPL-3.0](LICENSE).
 "# Code-Bhumi" 
